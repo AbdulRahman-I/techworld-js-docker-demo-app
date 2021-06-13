@@ -24,26 +24,10 @@
     h3 {
         display: inline-block;
     }
-    #container {
-        display: none;
-    }
-    #container-edit {
-        display: none;
-    }
-    #container-edit input {
-        height: 32px;
-    }
-    #container-edit hr {
-        margin: 25px 0;
-    }
-    #container-edit input {
-        width: 195px;
-        font-size: 15px;
-    }
 </style>
 <script>
     (async function init() {
-        const response = await fetch('http://localhost:3000/get-profile');
+        const response = await fetch('http://13.232.226.156:3000/get-profile');
         console.log("response", response);
         const user = await response.json();
         console.log(JSON.stringify(user));
@@ -66,7 +50,7 @@
             interests: document.getElementById('input-interests').value
         };
         
-        const response = await fetch('http://localhost:3000/update-profile', {
+        const response = await fetch('http://15.206.100.221:3000/update-profile', {
             method: "POST",
             headers: {
               'Accept': 'application/json',
